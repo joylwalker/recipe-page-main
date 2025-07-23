@@ -134,12 +134,19 @@
       font-family: 'Outfit';
       font-weight: 300;
       border: none;
-      border-bottom: 1px solid rgba(220, 220, 220, 0.817);
-      padding: 10px 200px 10px 20px;
+      border-bottom: none;
     }
 
     tr:last-child td{
       border-bottom: none;
+    }
+
+    .divider-line {
+      height: 1px;
+      width: 100%; /* 你可以調整這裡讓它更短或更長 */
+      margin: 0px;
+      padding: 0px;
+      background-color: rgba(220, 220, 220, 0.817);
     }
 
     table{
@@ -148,22 +155,158 @@
       width: 100%;
     }
 
-    .custom-list{
-      padding-left: 20px;
+    .custom-list{ 
       list-style-position: outside;
+      padding-left: 1.5rem;
     }
 
+    .custom-list li{
+      text-indent: 0;
+      padding-left: 0.6rem;
+    }
+
+    .special-list{
+      list-style-position: outside;
+      padding-left: 1.2rem;  
+    }
+
+    .special-list li{
+      text-indent: 1.2rem;
+    }
+
+    .label{
+      padding: 10px 0px 10px 35px;
+    }
+
+    .value{
+      padding-left: 70px;
+    }
+    
     .colored{
       color: hsl(14, 45%, 36%);
       font-family: 'Outfit';
       font-weight: 600;
+    }
+
+    @media(max-width: 375px){
+      body{
+      background-color: white;
+      margin: 0;
+      }
+
+      .box{
+      background-color: white;
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+      padding: 0;
+      }
+
+      .photo img
+    {
+      width: auto;
+      height:200px ;
+      border-radius: 0;
+    }
+
+    .custom-list{
+      list-style-position: outside;
+      margin: 0 30px 0 27px;
+      padding-left: 0.5rem;
+    }
+
+    .custom-list li{
+      text-indent: 0rem;
+      padding-left: 0.8rem;
+    }
+
+    .special-list{
+      list-style-position: outside;
+      margin: 0 30px 0 5px;
+      padding: 0;
+    }
+
+    .special-list li{
+      text-indent: -0.2rem;
+      padding-left: 0.9rem;
+
+    }
+
+    .roseblock{
+      width: 60%;
+      border-radius: 5%;
+      padding: 5px 60px 20px 25px;
+      margin: 30px 35px 0 30px;
+    }
+
+    hr{
+      width: 85%;
+    }
+
+    h1{
+      padding: 0 35px 0 30px;
+    }
+
+    h2{
+      padding: 0 35px 0 30px;
+    }
+
+    p{
+      margin-bottom: 20px;
+      padding: 0 40px 0 30px;
+      text-align: left;
+    }
+
+    ul{
+      list-style-position: outside;
+    }
+
+    ol{
+      list-style-position: outside;
+    }
+
+    li{
+      margin-left: 1rem;
+      margin-right: 0.6rem;
+    }
+
+    .normal{
+      text-align: left;
+    }
+
+    .label{
+      padding: 0 0 0 60px;
+    }
+
+    .value{
+      padding: 0 55px 0 0;
+      margin: 0;
+    }
+
+    .colored{
+      padding: 0;
+    }
+
+    td{
+      border-bottom: none;
+      padding: 12.5px 0 12.5px 0;
+    }
+
+    .divider-line {
+      height: 1px;
+      width: 50%; /* 你可以調整這裡讓它更短或更長 */
+      margin: 0 20px 0 30px;
+      padding: 0 65px 0 65px;
+      background-color: rgba(220, 220, 220, 0.817);
+    }
+
     }
   </style>
 </head>
 <body>
   <div class="box">
     <div class="photo">
-      <img src="./assets/images/image-omelette.jpeg " width="50%" alt="omlette">
+      <img src="./assets/images/image-omelette.jpeg " alt="omlette">
     </div>
 
     <h1>Simple Omelette Recipe</h1>
@@ -174,37 +317,37 @@
 
     <div class="roseblock">
       <h3>Preparation time</h3>
-      <ul class="custom-list">
-        <li><strong>&emsp;Total: </strong><span class="normal">Approximately 10 minutes</span></li>
-        <li><strong>&emsp;Preparation: </strong><span class="normal"></span>5 minutes</span></li>
-        <li><strong>&emsp;Cooking: </strong><span class="normal"></span>5 minutes</span></li>
+      <ul class="special-list">
+        <li><strong>Total: </strong><span class="normal">Approximately 10 minutes</span></li>
+        <li><strong>Preparation: </strong><span class="normal"></span>5 minutes</span></li>
+        <li><strong>Cooking: </strong><span class="normal"></span>5 minutes</span></li>
       </ul>
     </div>
 
     <h2>Ingredients</h2>
     <ul class="custom-list">
-      <li>&emsp;2-3 large eggs</li>
-      <li>&emsp;Salt, to taste</li>
-      <li>&emsp;Pepper, to taste</li>
-      <li>&emsp;1 tablespoon of butter or oil</li>
-      <li>&emsp;Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      <li>2-3 large eggs</li>
+      <li>Salt, to taste</li>
+      <li>Pepper, to taste</li>
+      <li>1 tablespoon of butter or oil</li>
+      <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
     </ul>
   
     <hr/>
 
     <h2>Instructions</h2>
     <ol class="custom-list">
-      <li><strong>&emsp;Beat the eggs: </strong><span class="normal">In a bowl, beat the eggs with a pinch of salt and pepper until they are &emsp;well mixed. You can add a tablespoon of water or milk for a fluffier texture.</span></li>
+      <li><strong>Beat the eggs: </strong><span class="normal">In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</span></li>
 
-      <li><strong>&emsp;Heat the pan: </strong><span class="normal">Place a non-stick frying pan over medium heat and add butter or oil.</span></li>
+      <li><strong>Heat the pan: </strong><span class="normal">Place a non-stick frying pan over medium heat and add butter or oil.</span></li>
 
-      <li><strong>&emsp;Cook the omelette: </strong><span class="normal">Once the butter is melted and bubbling, pour in the eggs. Tilt the &emsp;pan to ensure the eggs evenly coat the surface.</span></li>
+      <li><strong>Cook the omelette: </strong><span class="normal">Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.</span></li>
 
-      <li><strong>&emsp;Add fillings (optional): </strong><span class="normal">When the eggs begin to set at the edges but are still slightly &emsp;&thinsp;runny in the middle, sprinkle your chosen fillings over one half of the omelette.</span></li>
+      <li><strong>Add fillings (optional): </strong><span class="normal">When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.</span></li>
 
-      <li><strong>&emsp;Fold and serve: </strong><span class="normal">As the omelette continues to cook, carefully lift one edge and fold it &emsp;over the fillings. Let it cook for another minute, then slide it onto a plate.</span></li>
+      <li><strong>Fold and serve: </strong><span class="normal">As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.</span></li>
 
-      <li><strong>&emsp;Enjoy: </strong><span class="normal">Serve hot, with additional salt and pepper if needed.</span></li>
+      <li><strong>Enjoy: </strong><span class="normal">Serve hot, with additional salt and pepper if needed.</span></li>
     </ol>
 
     <hr/>
@@ -216,23 +359,42 @@
         <table class="nutrition-table">
           <tbody>
             <tr>
-              <td>Calories</td>
-              <td><span class="colored">277kcal</span></td>
+              <td class="label">Calories</td>
+              <td class="value"><span class="colored">277kcal</span></td>
             </tr> 
-  
+            
+             <!-- 這行是灰色的線，用border-bottom的話，的話，線條會塞滿格子寬度（100%)，沒辦法任意調整寬度 -->
             <tr>
-              <td>Carbs</td>
-              <td><span class="colored">0g</span></td>
+              <td colspan="2">
+                <div class="divider-line"></div>
+              </td>
             </tr>
 
             <tr>
-              <td>Protein</td>
-              <td><span class="colored">20g</span></td>
+              <td class="label">Carbs</td>
+              <td class="value"><span class="colored">0g</span></td>
             </tr>
 
             <tr>
-              <td>Fat</td>
-              <td><span class="colored">22g</span></td>
+              <td colspan="2">
+                <div class="divider-line"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="label">Protein</td>
+              <td class="value"><span class="colored">20g</span></td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <div class="divider-line"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="label">Fat</td>
+              <td class="value"><span class="colored">22g</span></td>
             </tr>
           </tbody>
         </table>
